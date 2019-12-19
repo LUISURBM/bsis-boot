@@ -2,7 +2,7 @@
     xmlns:beans="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:p="http://www.springframework.org/schema/p"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
                     http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
                     http://www.springframework.org/schema/security
                     http://www.springframework.org/schema/security/spring-security-3.2.xsd">
@@ -21,7 +21,7 @@
     <intercept-url pattern="/donors/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/donors/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/passwordresets/**" security="none" />
 
   <http pattern="/donations/**" create-session="never" use-expressions="true">
@@ -30,7 +30,7 @@
     <intercept-url pattern="/donations/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/donations/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/configurations/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
@@ -38,28 +38,28 @@
     <intercept-url pattern="/configurations" access="permitAll" method="GET"/>
     <intercept-url pattern="/configurations/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/bloodtests/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/bloodtests/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/bloodtest/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/bloodtypes/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/bloodtypes/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/bloodtypes/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/donationbatches/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/donationbatches/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/donationbatches/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/deferrals/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
@@ -73,105 +73,105 @@
     <intercept-url pattern="/deferralreasons/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/deferralreasons/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/donorcommunications/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/donorcommunications/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/donorcommunications/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/locations/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/locations/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/locations/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/components/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/components/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/components/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/componenttypes/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/componenttypes/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/componenttypes/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/compatibility/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/compatibility/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/compatibility/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/labels/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/labels/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/labels/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/roles/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/roles/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/roles/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/reports/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/reports/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/reports/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/requests/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/requests/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/requests/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/usages/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/usages/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/usages/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/ttitests/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/ttitests/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/ttitests/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/bloodgroupingtests/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/bloodgroupingtests/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/bloodgroupingtests/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/testresults/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/testresults/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/testresults/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/testbatches/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
     <intercept-url pattern="/testbatches/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/testbatches/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/users/**" create-session="never" use-expressions="true">
   	<http-basic />
     <session-management />
@@ -220,49 +220,49 @@
     <intercept-url pattern="/adverseevents/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/adverseevents/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/mobileclinic/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/mobileclinic/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/mobileclinic/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/componentbatches/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/componentbatches/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/componentbatches/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/orderforms/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/orderforms/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/orderforms/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/returnforms/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/returnforms/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/returnforms/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/inventories/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/inventories/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/inventories/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/divisions/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/divisions/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/divisions/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/dataexport/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
@@ -277,14 +277,14 @@
     <intercept-url pattern="/componenttypecombinations/**" access="isFullyAuthenticated()" />
 
   </http>
-  
+
   <http pattern="/bloodtestingrules/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
     <intercept-url pattern="/bloodtestingrules/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/bloodtestingrules/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/version" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
@@ -298,7 +298,7 @@
     <intercept-url pattern="/transfusionreactiontypes/**" access="isAnonymous()" method="OPTIONS"/>
     <intercept-url pattern="/transfusionreactiontypes/**" access="isFullyAuthenticated()" />
   </http>
-  
+
   <http pattern="/transfusions/**" create-session="never" use-expressions="true">
     <http-basic />
     <session-management />
@@ -314,8 +314,8 @@
                 default-target-url="/index.html"
                 authentication-failure-url="/login.html?error=true"
                 always-use-default-target="true" />
-  </http>   
-  
+  </http>
+
 
   <beans:bean id='bCryptPasswordEncoder' class='org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder'/>
 
