@@ -1,6 +1,6 @@
 {
-  "apiHost": "localhost",
-  "apiPort": "8080",
+  "apiHost": "60584-f9c75b85-17df-448c-ad66-7660d6c4c452.ws-us02.gitpod.io",
+  "apiPort": "",
   "apiApp": "bsis",
   "language": "en",
   "languageDebug": false

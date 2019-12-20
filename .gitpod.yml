@@ -15,3 +15,9 @@ tasks:
     command: >
         apachectl start;
         multitail /var/log/apache2/error.log -I /var/log/apache2/access.log
+  - name: bsis spring-boot
+    command: >
+      cd complete && mvn clean install compile -DSkipTests=true && mvn spring-boot:run
+  - name: bsis front-end
+    command: >
+      cd bsis-frontend && npm install -g grunt-cli && grunt serve --force

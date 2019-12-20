@@ -38,7 +38,7 @@ public class GeneralConfigController {
 
   @Autowired
   private GeneralConfigFactory generalConfigFactory;
-  
+
   @InitBinder
   protected void initBinder(WebDataBinder binder) {
     binder.setValidator(generalConfigBackingFormValidator);

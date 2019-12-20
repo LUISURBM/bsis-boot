@@ -1447,7 +1447,7 @@ var DONATION = {DONOR: {}};
     app.constant('SYSTEMCONFIG', response.data);
     var initInjector = angular.injector(['ng']);
     var $http = initInjector.get('$http');
-    var url = 'http://' + response.data.apiHost + ':' + response.data.apiPort + '/' + response.data.apiApp;
+    var url = 'https://' + response.data.apiHost + ':' + response.data.apiPort + '/' + response.data.apiApp;
 
     return $http.get(url + '/configurations').then(function(configResponse) {
       app.constant('USERCONFIG', configResponse.data);

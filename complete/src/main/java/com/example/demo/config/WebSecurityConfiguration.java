@@ -19,36 +19,26 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 
-
-@Configuration
 @EnableWebSecurity
-@ImportResource({"classpath:bsis-servlet.xml"})
 
-public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfiguration {
 
-@Override
-    protected void configure(AuthenticationManagerBuilder auth)
-      throws Exception {
-        auth
-          .inMemoryAuthentication()
-          .withUser("user")
-            .password("password")
-            .roles("USER")
-            .and()
-          .withUser("admin")
-            .password("admin")
-            .roles("USER", "ADMIN");
-    }
-
-    @Override
+    @Autowired
     protected void configure(HttpSecurity http) throws Exception {
-        http
-          .authorizeRequests()
-          .anyRequest()
-          .authenticated()
-          .and()
-          .httpBasic();
+        http.authorizeRequests()
+        .antMatchers("/bsis/**").hasRole("ADMIN")
+      .and()
+      .formLogin();
     }
+
+
+    @Autowired
+public void configureGlobal(AuthenticationManagerBuilder auth)
+  throws Exception {
+    auth.inMemoryAuthentication()
+      .withUser("admin").password("admin").roles("USER", "ADMIN");
+}
 
 }
