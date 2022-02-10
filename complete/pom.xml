@@ -402,7 +402,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <hibernate-version>4.3.7.Final</hibernate-version>
+        <hibernate-version>5.4.24.Final</hibernate-version>
         <liquibase.propertyFile>src/main/resources/bsis.properties</liquibase.propertyFile>
     </properties>
 
